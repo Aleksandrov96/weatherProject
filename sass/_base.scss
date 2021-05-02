@@ -1,0 +1,44 @@
+:root {
+    --gradient: radial-gradient(rgba(255, 255, 255, 100), rgba(236,110,76, 100));
+    --color-orange: rgba(236,110,76, 100);
+    --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+    --shadow-light: 0px 3px 8px rgba(0, 0, 0, 0.24);
+    --shadow-cool: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    
+    --color-grey-light-1: #faf9f9;
+    --color-grey-light-2: #f4f2f2;
+    --color-grey-light-3: #f0eeee;
+    --color-grey-light-4: #ccc;
+    
+    --color-grey-dark-1: #333;
+    --color-grey-dark-2: #777;
+    --color-grey-dark-3: #999;
+
+    
+    --line: 1px solid var(--color-grey-light-2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    background-image: var(--gradient);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}

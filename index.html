@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="img/logo-1.png">
+    <title>Weather</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <img class="logo" alt="Weather logo" src="img/logo-1.png">
+
+            <form class="search" id="formSearch">
+                <input type="text" class="search__input" placeholder="Search city" required>
+                <button class="search__button" type="submit">
+                    <svg class="search__icon">
+                        <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                    </svg>
+                </button>
+            </form>
+        </header>
+
+        <div class="content">
+
+            <div class="weather-sidebar">
+                <div class="overview">
+                    <div class="overview__image">
+                        <!-- <img src="img/logo-1.png" alt="Weather today" class="overview__image--icon"> -->
+                        <img alt="Weather icon" class="overview__image--icon">
+                    </div>
+                    <div class="overview__temperature">&deg;C</div>
+                    <div class="overview__geo"></div>
+                    <div class="overview__date">
+                        <div class="overview__city"></div>
+                        <div class="overview__time"></div>
+                    </div>
+                    <div class="overview__info"></div>
+                </div>
+            </div>
+            <div class="detail">
+                <div class="week"></div>
+
+                <div class="location-details">
+                    <div id="map" class="location"></div>
+                    <div class="info">
+                        <div class="info__item">
+                            <p class="info__heading">Min & Max</p>
+                            <div class="info__container">
+                                <div class="info__minmax">
+                                    <img src="img/max.png" alt="Min" class="info__img">
+                                    <img src="img/min.png" alt="Max" class="info__img">
+                                </div>
+                                <div class="info__description">
+                                    <p class="info__description--max"></p>
+                                    <p class="info__description--min"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info__item">
+                            <p class="info__heading">Humidity</p>
+                            <div class="info__single">
+                                <img src="img/humidity.png" alt="Humidity" class="info__img">
+                                <p class="info__humidity"></p>
+                            </div>
+                        </div>
+                        <div class="info__item">
+                            <p class="info__heading">Visibility</p>
+                            <p class="info__visibility"></p>
+                            <p class="info__visibility--description"></p>
+                        </div>
+                        <div class="info__item">
+                            <p class="info__heading">Wind status</p>
+                            <div class="info__single">
+                                <img src="img/wind.png" alt="Wind" class="info__img">
+                                <p class="info__wind"></p>
+                            </div>
+                        </div>
+                        <div class="info__item">
+                            <p class="info__heading">Sunrise & Sunset</p>
+                            <div class="info__container">
+                                <div class="info__sun">
+                                    <img src="img/sunrise.png" alt="Sunrise" class="info__img">
+                                    <img src="img/sunset.png" alt="Sunset" class="info__img">
+                                </div>
+                                <div class="info__description">
+                                    <p class="info__description--sunrise"></p>
+                                    <p class="info__description--sunset"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info__item">
+                            <p class="info__heading">Feels like</p>
+                            <p class="info__feels"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p class="popup__copyright">Copyright &copy; by <a class="popup__link" href="https://www.linkedin.com/in/pavel-aleksandrov-6b35601b2/">Pavel Aleksandrov</a> 2021</p>
+    </footer>
+    <div class="popup">
+        <div class="popup__content">
+            <a href="#" class="popup__close">&times;</a>
+            <p class="popup__heading">Welcome to my first web page!</p>
+            <p class="popup__copyright">Copyright &copy; by <a class="popup__link" href="https://www.linkedin.com/in/pavel-aleksandrov-6b35601b2/">Pavel Aleksandrov</a> 2021</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+.container {
+    max-width: 120rem;
+    margin: 8rem auto;
+    background-color: var(--color-grey-light-1);
+    box-shadow: var(--shadow-dark);
+    border-radius: 1rem;
+    overflow: hidden;
+    min-height: 40rem;
+}
+
+.header {
+    font-size: 1.4rem;
+    height: 8rem;
+    background-color: var(--color-grey-light-1);
+    border-bottom: var(--line);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+}
+
+.weather-sidebar {
+    border-right: var(--line);
+    display: flex;
+    flex: 0 0 30%;
+    height: 30rem;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-grey-light-2);
+    width: 100%;
+    box-shadow: var(--shadow-cool);
+}
+
+.popup {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(black, .85);
+    z-index: 9999;
+    text-align: center;
+
+    &__content {
+        width: 40%;
+        height: 50rem;
+        box-shadow: var(--shadow-cool);
+        border-radius: 1rem;
+        background-color: rgba(240, 238, 238, .2);
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all .4s .2s;
+    }
+
+    &__heading {
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: inline-block;
+        color: var(--color-orange);
+        opacity: .7;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__copyright {
+        font-size: 1.5rem;
+        font-weight: 200;
+        color: var(--color-grey-dark-3);
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__close {
+        &:link,
+        &:visited {
+            color: var(--color-orange);
+            opacity: .7;
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+            font-size: 4rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: all .2s;
+            line-height: 1;
+        }
+
+        &:hover {
+            transform: scale(1.5);
+            color: var(--color-orange);
+            opacity: 1;
+        }
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        color: var(--color-orange);
+        text-transform: uppercase;
+        font-weight: 600;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: var(--color-grey-light-1);
+            transition: width .3s;
+        }
+        &:hover::after {
+            width: 100%;
+            transition: width .3s;
+        }
+    }
+}
+
+footer {
+    text-align: center;
+}
