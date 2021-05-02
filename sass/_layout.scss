@@ -10,7 +10,7 @@
 
 .header {
     font-size: 1.4rem;
-    height: 8rem;
+    height: 7rem;
     background-color: var(--color-grey-light-1);
     border-bottom: var(--line);
 
@@ -24,7 +24,6 @@
 }
 
 .weather-sidebar {
-    border-right: var(--line);
     display: flex;
     flex: 0 0 30%;
     height: 30rem;

@@ -86,7 +86,6 @@ const renderMap = function (coords) {
     }).addTo(map);
 
     L.marker(coords).addTo(map)
-        .openPopup();
 }
 
 
